@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.detailedWeatherBlock {
+    background-color: white;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -2px;
+}
+
+.simpleWeatherBlock {
+    flex: 0 0 20%;
+}
+
+.main {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dayOfMonth {
+    margin: 10px;
+    font-size: 80px;
+    font-weight: bold;
+}

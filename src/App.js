@@ -1,23 +1,30 @@
 import './App.css';
-import SearchForm from './components/SearchForm/SearchForm';
 import MainBlock from './components/MainBlock/MainBlock';
-import {useEffect, useState} from 'react';
+import SearchForm from './components/SearchForm/SearchForm';
+import {useState} from 'react';
 
 function App() {
 	const [weatherData, setWeatherData] = useState(null);
 	const updateWeatherData = (data) => {
-		console.log(data); // Проверяем данные перед их установкой
+		// console.log(data); // Проверяем данные перед их установкой
 		setWeatherData(data);
-	}
+	};
 
-
-	useEffect(() => {
-		console.log(weatherData); // Этот console.log отобразит обновленное значение weatherData
-	}, [weatherData]);
+	const [cityName, setCityName] = useState('London');
+	const updateCityName = (cityName) => {
+		// console.log(cityName);
+		setCityName(cityName);
+	};
+	
 	return (
 		<div className="App">
-			<SearchForm updateWeatherData={updateWeatherData}/>
-			<MainBlock weatherData={weatherData}/>
+			<div className="appComponents"><SearchForm
+				weatherData={weatherData} setWeatherData={setWeatherData}
+				updateWeatherData={updateWeatherData}
+				cityName={cityName} setCityName={setCityName}
+				updateCityName={updateCityName}
+			/>
+				<MainBlock weatherData={weatherData} cityName={cityName}/></div>
 		</div>
 	);
 }

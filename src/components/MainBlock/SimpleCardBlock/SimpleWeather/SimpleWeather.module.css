@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.simpleWeatherCard {
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    transition: transform 0.3s; /* Анимация изменения высоты */
+    background-color: #fff; /* Фоновый цвет */
+    flex: 1;
+    margin-left: -2px;
+}
+
+:root {
+    --mainFont-font-size: 18px;
+}
+
+.mainFont {
+    font-size: var(--mainFont-font-size);
+}
+
+.dayOfMonth {
+    font-size: calc(1.3 * var(--mainFont-font-size));
+    font-weight: bold;
+}
+
+.tempContainer {
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.tempLabel {
+    font-size: var(--mainFont-font-size);
+}
+
+.tempValue {
+    font-size: var(--mainFont-font-size);
+    font-weight: bold;
+    margin-top: 2px
+}
+
+.minTemp {
+    float: left;
+}
+
+.maxTemp {
+    float: right;
+}
+
+.activeTab {
+    /*transform: scaleY(1.1); !* Увеличиваем высоту вкладки в 1.5 раза *!*/
+    background-color: deepskyblue;
+}

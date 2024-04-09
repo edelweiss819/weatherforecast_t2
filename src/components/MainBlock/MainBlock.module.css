@@ -1,3 +1,8 @@
 .mainBlock {
-    background-color: brown;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.weatherCityMessage {
+    margin-bottom: 20px;
 }
