@@ -27,7 +27,8 @@ function MainBlock({weatherData, cityName}) {
 
 	return (
 		<div className={styles.mainBlock}>
-			<h1 className={styles.weatherCityMessage}>Погода в {cityName}</h1>
+
+			<h1 className={styles.weatherCityMessage}>{cityName}</h1>
 			<SimpleCardBlock
 				weatherData={weatherData}
 				activeDate={activeDate}
