@@ -7,7 +7,6 @@ function MainBlock({weatherData, cityName}) {
 	const [activeDate, setActiveDate] = useState(null);
 
 	useEffect(() => {
-		// Установка первой даты из weatherData при первом рендеринге
 		if (weatherData && Object.keys(weatherData).length > 0) {
 			const firstDate = Object.keys(weatherData)[0];
 			setActiveDate(firstDate);
@@ -18,9 +17,6 @@ function MainBlock({weatherData, cityName}) {
 		setActiveDate(date);
 	};
 
-	// console.log(activeDate);
-
-	// Если weatherData равен null, отображаем сообщение о загрузке
 	if (weatherData === null) {
 		return <p>Loading...</p>;
 	}

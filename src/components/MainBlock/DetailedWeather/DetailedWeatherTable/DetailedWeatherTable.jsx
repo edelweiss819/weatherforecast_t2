@@ -5,7 +5,7 @@ import {
 import styles from './DetailedWeatherTable.module.css';
 
 function DetailedWeatherTable({activeWeatherData}) {
-	// Фильтруем данные о погоде по временам суток
+
 	const nightData = activeWeatherData.find(data => data.dt_txt.includes('03:00:00'));
 	const morningData = activeWeatherData.find(data => data.dt_txt.includes('12:00:00'));
 	const dayData = activeWeatherData.find(data => data.dt_txt.includes('18:00:00'));

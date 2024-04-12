@@ -18,18 +18,13 @@ export function kelvinToCelsius(kelvin) {
 }
 
 export function findMinTemp(weatherData) {
-	// Инициализируем переменную для хранения минимальной температуры
 	let minTemp = weatherData[0].main.temp_min;
-	// Перебираем все объекты в массиве weatherData
 	weatherData.forEach(data => {
-		// Получаем значение temp_min из текущего объекта
 		const tempMin = data.main.temp_min;
-		// Если tempMin меньше текущего значения minTemp, обновляем minTemp
 		if (tempMin < minTemp) {
 			minTemp = tempMin;
 		}
 	});
-	// Возвращаем наименьшее значение температуры
 	return minTemp;
 }
 

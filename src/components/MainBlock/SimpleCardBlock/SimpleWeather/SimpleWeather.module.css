@@ -7,8 +7,7 @@
     border: 2px solid black;
     border-radius: 10px 10px 0 0;
     padding: 10px;
-    transition: transform 0.3s; /* Анимация изменения высоты */
-    background-color: #fff; /* Фоновый цвет */
+    background-color: #fff;
     flex: 1;
     margin-left: -2px;
 }

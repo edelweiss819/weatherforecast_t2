@@ -19,23 +19,17 @@ function DetailedWeather({
 	}, [activeDate]);
 
 
-	// console.log(`ActiveDate : ${activeDate}`);
-	// console.log(`CurrentActiveDate: ${currentActiveDate}`);
-	// Проверяем, что activeDate не равен null
 	if (currentActiveDate === null) {
 		return <p></p>;
 	}
 
-	// Фильтруем данные погоды и находим данные для активной даты
 	const activeWeatherData = weatherData[currentActiveDate] || null;
-	// console.log(`ActiveWeatherData : ${activeWeatherData}`);
-	// console.log(weatherData);
+
 	if (activeWeatherData === null) {
 		return <p>Нет данных для выбранной даты.</p>;
 	}
 
 
-	// Достаем нужные данные для отображения
 	const dayOfWeek = dayOfWeekHandle(currentActiveDate);
 	const dayOfMonth = dayOfMonthHandle(currentActiveDate);
 	const month = monthHandle(currentActiveDate);

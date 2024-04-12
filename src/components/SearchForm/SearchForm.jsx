@@ -18,9 +18,8 @@ function SearchForm({
 				`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${owmApiKey}&lang=ru`,
 			);
 			const data = await response.json();
-			console.log(data);
 			const suggestions = data.map((item) => ({
-				label: `${item.local_names?.ru || item.name}, ${item.country}`,
+				label: `${item.local_names.ru || item.name}, ${item.country}`,
 				value: `${item.name}, ${item.country}`,
 			}));
 			setCitySuggestions(suggestions);
@@ -50,17 +49,16 @@ function SearchForm({
 	};
 
 	useEffect(() => {
-		// Проверяем, выбран ли уже город (если cityName не пустое)
 		if (cityName) {
-			fetchWeatherData(cityName); // Выполняем запрос погоды только если город выбран
+			fetchWeatherData(cityName);
 		}
 	}, [cityName]);
 
 	const handleInputChange = (event) => {
 		const value = event.target.value;
 		setCityName(value);
-		updateCityName(value); // Отправляем cityName в родительский компонент
-		fetchCitySuggestions(value); // Получаем предложения по введенному городу
+		updateCityName(value);
+		fetchCitySuggestions(value);
 	};
 
 	useEffect(() => {

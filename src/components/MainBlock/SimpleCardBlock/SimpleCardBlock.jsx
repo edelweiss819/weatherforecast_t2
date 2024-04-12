@@ -23,8 +23,8 @@ function SimpleCardBlock({
 					key={date}
 					dateProp={date}
 					weatherData={data}
-					activeDate={activeDate} // Передача активной даты
-					setActiveDate={setActiveDate} // Передача функции для установки активной даты
+					activeDate={activeDate}
+					setActiveDate={setActiveDate}
 					handleToogleActive={handleToggleActive}
 				/>
 			))}
